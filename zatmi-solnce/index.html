@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15121c">
+<title>Затми Солнце — студия маникюра, Коньково</title>
+<meta name="description" content="Маникюр, педикюр, ресницы и брови в Коньково. ул. Генерала Антонова, 3а. Тел. +7 991 717-74-07">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#15121c;--surf:#201b2a;--line:#372f45;--accent:#c3a6f2;--glow:#e8dcff;
+--ink:#f4eff3;--mute:#a79fab;--disp:"Oswald","Arial Narrow",sans-serif;--body:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);padding-bottom:88px}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+ul{list-style:none;margin:0;padding:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:#fff3c4;color:#4d3d00;font-size:13px;text-align:center;padding:8px 16px}
+
+/* Первый экран */
+.hero{position:relative;overflow:hidden;padding:36px 0 44px;isolation:isolate}
+.hero::before{content:"";position:absolute;z-index:-1;width:min(560px,130vw);aspect-ratio:1;right:-58%;top:-14%;border-radius:50%;
+ background:radial-gradient(circle,var(--bg) 54%,transparent 55%),
+ radial-gradient(circle,color-mix(in srgb,var(--glow) 75%,transparent) 0 56%,color-mix(in srgb,var(--accent) 35%,transparent) 62%,transparent 71%);
+ filter:blur(2px);animation:rise 1.4s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tag{font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--surf) 80%,transparent)}
+.tag.kind{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.open.on{color:#8ee0a8;border-color:#2f5a3d} .open.off{color:#ffb4a8;border-color:#5c3530}
+h1{font:600 clamp(52px, 17vw, 120px)/.92 var(--disp);text-transform:uppercase;letter-spacing:-.01em;margin:0 0 18px;max-width:9.5em}
+.tagline{font-size:18px;color:#d9d1db;text-shadow:0 1px 12px var(--bg);max-width:30em;margin:0 0 18px}
+.award{display:inline-block;margin:0 0 26px;padding:8px 14px;border-radius:10px;font-size:14px;font-weight:600;
+ color:var(--glow);background:color-mix(in srgb,var(--glow) 12%,transparent);border:1px solid color-mix(in srgb,var(--glow) 35%,transparent)}
+.btns{display:flex;gap:10px;margin-bottom:18px;max-width:440px}
+.btn{flex:1;display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:15px 18px;border-radius:14px;font-weight:700;font-size:17px;text-decoration:none}
+.btn.call{background:var(--accent);color:var(--bg)}
+.btn.route{color:var(--ink);border:1.5px solid var(--line);background:color-mix(in srgb,var(--surf) 70%,transparent)}
+.phone{display:block;font:600 30px/1.1 var(--disp);color:var(--ink);text-decoration:none;letter-spacing:.01em}
+.phone-alt{display:block;color:var(--mute);margin-top:4px}
+.hero-addr{color:var(--mute);font-size:14px;margin:6px 0 0}
+
+/* Фото на первом экране */
+.has-photo{min-height:min(92svh,760px);display:flex;align-items:flex-end;padding-top:120px}
+.has-photo::before{display:none}
+.hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.has-photo::after{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 35%,transparent) 0%,color-mix(in srgb,var(--bg) 55%,transparent) 40%,var(--bg) 92%)}
+.has-photo .tagline{color:#efe8f0}
+/* Галерея */
+.gallery-sec{border-top:0;padding-top:8px}
+.gallery{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding-bottom:6px;margin:0 -20px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery li{scroll-snap-align:start}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:var(--surf)}
+
+/* Секции */
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+h2{font:600 clamp(32px,8vw,52px)/1 var(--disp);text-transform:uppercase;margin:0 0 24px}
+h3{font-size:17px;margin:0 0 6px}
+.lead{font-size:18px;color:#d9d1db}
+.note{color:var(--mute);font-size:14px;margin:18px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.svc{display:flex;flex-direction:column;gap:6px;min-height:150px;padding:16px;border-radius:16px;background:var(--surf);border:1px solid var(--line)}
+.cat{font-size:12px;font-weight:700;color:var(--mute)}
+.svc-name{font-weight:600;line-height:1.3}
+.price{margin-top:auto;font:600 22px/1 var(--disp);color:var(--accent)}
+.more{margin-top:10px}
+.more summary{display:inline-block;cursor:pointer;padding:10px 16px;border-radius:999px;border:1px solid var(--line);font-weight:600;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more[open] summary{margin-bottom:10px}
+.praise{display:grid;gap:12px}
+.praise li{padding:20px;border-radius:18px;background:var(--surf);border-left:3px solid var(--accent)}
+.praise p{margin:0;color:#d9d1db}
+.score{display:flex;align-items:flex-end;gap:16px;margin-bottom:24px}
+.score-num{font:600 clamp(96px,28vw,160px)/.8 var(--disp);color:var(--ink)}
+.score-cap{display:flex;flex-direction:column;gap:4px;color:var(--mute);padding-bottom:6px}
+.stars{color:var(--glow);font-size:22px;letter-spacing:2px}
+.retell{display:grid;gap:14px;max-width:44em}
+.retell li{font-size:17px;padding-left:18px;border-left:1px solid var(--line)}
+.place{display:grid;gap:24px}
+.addr{font:600 26px/1.15 var(--disp);margin:0 0 4px}
+.district{color:var(--mute);margin:0 0 20px}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;margin:0}
+.hours dt{color:var(--mute)} .hours dd{margin:0;font-weight:600}
+.map-box{position:relative;height:300px;border-radius:18px;overflow:hidden;background:var(--surf);border:1px solid var(--line)}
+.map-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:20px;text-align:center;color:var(--mute)}
+.map-file{color:var(--accent);font-weight:700;font-size:18px;text-decoration:none}
+.map{position:relative;width:100%;height:100%;border:0;display:block}
+.map-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:12px 0 0;font-weight:600}
+.final{padding:56px 0 64px;text-align:left}
+.final h2{max-width:12em}
+.final .btn{flex:none;padding:17px 28px}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:13px;padding:22px 0 26px}
+.float{position:fixed;left:16px;right:16px;bottom:14px;z-index:10;text-align:center;background:var(--accent);color:var(--bg);
+ padding:16px;border-radius:16px;font-weight:700;font-size:17px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+@media (min-width:760px){
+ body{padding-bottom:0} .float{display:none}
+ .hero{padding:72px 0 80px} .hero::before{right:-6%;top:-18%;width:620px}
+ .grid{grid-template-columns:repeat(4,1fr)}
+ .gallery{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);margin:0;padding:0;overflow:visible}
+ .has-photo{padding-top:160px}
+ .praise{grid-template-columns:repeat(3,1fr)}
+ .place{grid-template-columns:1fr 1.4fr;align-items:start} .map-box{height:380px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Демо-концепт, не официальный сайт. Удалим по первой просьбе.</div>
+<header class="hero has-photo"><img class="hero-photo" src="hero.jpg" alt="Зона ожидания с неоновой вывеской «Затми Солнце»" fetchpriority="high"><div class="wrap">
+<div class="tags"><span class="tag kind">Студия маникюра</span><span class="tag">Коньково</span><span class="tag open" id="open">Ежедневно 10:00–22:00</span></div>
+<h1>Затми Солнце</h1>
+<p class="tagline">Маникюр, педикюр, ресницы и брови в Коньково</p>
+<p class="award">Лучший салон красоты 2026 по версии 2ГИС</p>
+<div class="btns"><a class="btn call" href="tel:+79917177407">Позвонить</a><a class="btn route" href="https://yandex.ru/maps/?rtext=~55.646119,37.533946&amp;rtt=auto" target="_blank" rel="noopener">Маршрут</a></div>
+<a class="phone" href="tel:+79917177407">+7 991 717-74-07</a>
+<p class="hero-addr">ул. Генерала Антонова, 3а, 2 этаж</p>
+</div></header>
+<main>
+<section class="sec gallery-sec"><div class="wrap">
+<ul class="gallery"><li><img src="nails.jpg" alt="Маникюр: квадратная форма, нежно-розовое покрытие с дизайном" loading="lazy" width="560" height="720"></li><li><img src="hall.jpg" alt="Зал студии с рабочими местами мастеров" loading="lazy" width="560" height="720"></li><li><img src="reception.jpg" alt="Стойка администратора" loading="lazy" width="560" height="720"></li></ul><p class="note">Фото владельца из карточки 2ГИС</p>
+</div></section>
+<section class="sec"><div class="wrap">
+<h2>Услуги и цены</h2>
+<ul class="grid"><li class="svc"><span class="svc-name">Маникюр + укрепление гелем + однотонное покрытие</span><span class="price">от 4 000 ₽</span></li><li class="svc"><span class="svc-name">Маникюр + укрепление акригелем + покрытие + дизайн</span><span class="price">от 3 000 ₽</span></li><li class="svc"><span class="cat">Маникюр</span><span class="svc-name">Наращивание ногтей</span><span class="price">от 5 000 ₽</span></li><li class="svc"><span class="svc-name">Педикюр с обработкой стоп + однотонное покрытие</span><span class="price">от 4 000 ₽</span></li><li class="svc"><span class="svc-name">Педикюр с обработкой стоп + покрытие + дизайн</span><span class="price">4 500 ₽</span></li><li class="svc"><span class="cat">Ресницы</span><span class="svc-name">Наращивание ресниц</span><span class="price">от 3 500 ₽</span></li><li class="svc"><span class="svc-name">Брови</span><span class="price">от 1 200 ₽</span></li><li class="svc"><span class="svc-name">Массаж</span><span class="price">от 1 800 ₽</span></li></ul><p class="note">Цены из 2ГИС, обновлены 27 мая 2026. Точную стоимость уточняйте по телефону.</p>
+</div></section>
+<section class="sec"><div class="wrap">
+<h2>За что хвалят</h2>
+<ul class="praise"><li><h3>Покрытие держится</h3><p>Пишут, что маникюр носится 3–4 недели без сколов и отслоек.</p></li><li><h3>Френч и квадрат</h3><p>Отдельно хвалят ровный квадрат и «усатый» френч.</p></li><li><h3>Забота о гостях</h3><p>Приветливые администраторы, кофе во время процедуры, стерильные инструменты.</p></li></ul>
+</div></section>
+<section class="sec reviews"><div class="wrap">
+<div class="score">
+  <span class="score-num">5.0</span>
+  <span class="score-cap"><span class="stars" aria-hidden="true">★★★★★</span>194 отзыва в 2ГИС</span>
+</div>
+<ul class="retell"><li>Постоянная клиентка ходит несколько лет и говорит, что за всё время не было ни одного минуса: стерильно, аккуратно, все мастера сильные.</li><li>Отмечают скорость: за полтора часа выходишь с готовым маникюром, а укрепление уже входит в стоимость.</li><li>Шутят, что свободные окошки на месяц вперёд разбирают за минуты, так что записываться стоит заранее.</li></ul>
+<p class="note">Пересказ отзывов из 2ГИС. <a href="https://2gis.ru/moscow/firm/70000001049821772/tab/reviews" target="_blank" rel="noopener">Читать все отзывы</a></p>
+</div></section>
+<section class="sec"><div class="wrap place">
+<div>
+<h2>Как добраться</h2>
+<p class="addr">ул. Генерала Антонова, 3а, 2 этаж</p>
+<p class="district">Коньково, Москва</p>
+<dl class="hours"><dt>Ежедневно</dt><dd>10:00–22:00</dd></dl>
+</div>
+<div>
+<div class="map-box"><span class="map-fallback">ул. Генерала Антонова, 3а</span>
+<iframe class="map" title="Карта: ул. Генерала Антонова, 3а" loading="lazy" allowfullscreen src="https://yandex.ru/map-widget/v1/?ll=37.533946%2C55.646119&amp;z=16&amp;pt=37.533946%2C55.646119%2Cpm2rdm"></iframe></div>
+<p class="map-links"><a href="https://yandex.ru/maps/?pt=37.533946,55.646119&amp;z=17&amp;l=map" target="_blank" rel="noopener">Открыть в Яндекс Картах</a><a href="https://2gis.ru/moscow/firm/70000001049821772" target="_blank" rel="noopener">Открыть в 2ГИС</a></p>
+</div>
+</div></section>
+<section class="sec final"><div class="wrap">
+<h2>Запишитесь по телефону</h2>
+<a class="btn call" href="tel:+79917177407">Позвонить +7 991 717-74-07</a>
+</div></section>
+</main>
+<footer><div class="wrap">Демо-концепт, не официальный сайт. Удалим по первой просьбе. Данные из открытой карточки <a href="https://2gis.ru/moscow/firm/70000001049821772" target="_blank" rel="noopener">2ГИС</a>.</div></footer>
+<a class="float" href="tel:+79917177407">Позвонить</a>
+<script>
+// Открыто как файл (не с сайта) — Яндекс не отдаёт карту, показываем кнопку вместо пустого блока
+if(location.protocol==='file:'){var fr=document.querySelector('.map'),sp=document.querySelector('span.map-fallback');if(fr){var a=document.createElement('a');a.className='map-fallback map-file';a.href=document.querySelector('.map-links a').href;a.target='_blank';a.textContent='Открыть карту';fr.replaceWith(a);if(sp)sp.remove();}}
+(function(){
+  var s={"mon": "10:00-22:00", "tue": "10:00-22:00", "wed": "10:00-22:00", "thu": "10:00-22:00", "fri": "10:00-22:00", "sat": "10:00-22:00", "sun": "10:00-22:00"}, el=document.getElementById('open'); if(!el||!Object.keys(s).length) return;
+  var keys=['sun','mon','tue','wed','thu','fri','sat'];
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Moscow',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var g=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+  var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday'));
+  var now=(parseInt(g('hour'),10)%24)*60+parseInt(g('minute'),10);
+  var m=function(h){var a=h.split(':');return a[0]*60+ +a[1]}, f=function(h){return h.replace(/^0(?=\d)/,'')};
+  var set=function(t,c){el.textContent=t;el.className='tag open '+c};
+  var today=s[keys[day]];
+  if(today){var r=today.split('-');
+    if(now>=m(r[0])&&now<m(r[1])) return set('Открыто до '+f(r[1]),'on');
+    if(now<m(r[0])) return set('Откроется в '+f(r[0]),'off');}
+  for(var i=1;i<=7;i++){var n=s[keys[(day+i)%7]];
+    if(n) return set('Откроется '+(i===1?'завтра ':'')+'в '+f(n.split('-')[0]),'off');}
+})();
+</script>
+</body>
+</html>
